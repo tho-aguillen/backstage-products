@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: products
+  description: A collection of all products and teams
+spec:
+  targets:
+    - ./teams/org.yaml
+    - ./systems/platform.yaml

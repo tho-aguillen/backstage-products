@@ -1,0 +1,107 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: software-engineering
+  description: The software engineering business domain
+spec:
+  type: business-unit
+  # Intentional no profile for testing
+  parent: airline
+  children: [platform-team]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: platform-team
+  description: Platform Team
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: platform-team@airline.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  parent: software-engineering
+  children: []
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: abel
+spec:
+  profile:
+    displayName: Abel
+    email: abel@airline.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Luna&backgroundColor=transparent
+  memberOf: [platform-team]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ana
+spec:
+  profile:
+    displayName: Ana
+    email: ana@airline.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Leo&backgroundColor=transparent
+  memberOf: [platform-team]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: estefanie
+spec:
+  profile:
+    displayName: Estefanie
+    email: estefanie@airline.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Midnight&backgroundColor=transparent
+  memberOf: [platform-team]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: zully
+spec:
+  profile:
+    displayName: Zully
+    email: zully@airline.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Midnight&backgroundColor=transparent
+  memberOf: [platform-team]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: luis
+spec:
+  profile:
+    displayName: Luis
+    email: luis@airline.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Midnight&backgroundColor=transparent
+  memberOf: [platform-team]
+
+---
+
+# This user is added as an example, to make it more easy for the "Guest"
+# sign-in option to demonstrate some entities being owned. In a regular org,
+# a guest user would probably not be registered like this.
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+  namespace: development
+spec:
+  profile:
+    displayName: Guest User
+    email: guest@example.com
+  memberOf: [group:default/platform-team]

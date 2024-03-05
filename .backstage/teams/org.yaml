@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: airline
+  description: The airline organization
+  links:
+    - url: http://www.airline.com/
+      title: Website
+    - url: https://backstage.airline.com/
+      title: Backstage
+spec:
+  type: organization
+  profile:
+    displayName: Airline
+    email: info@airline.com
+  children: [software-engineering]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: airline-groups
+  description: A collection of all Backstage airline groups
+spec:
+  targets:
+    - ./software-engineering.yaml
