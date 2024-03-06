@@ -3,5 +3,7 @@ kind: System
 metadata:
   name: platform
   description: Platform system
+  tags:
+    - idp
 spec:
   owner: platform-team

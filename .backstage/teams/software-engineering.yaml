@@ -3,6 +3,8 @@ kind: Group
 metadata:
   name: software-engineering
   description: The software engineering business domain
+  tags:
+    - software-engineering
 spec:
   type: business-unit
   # Intentional no profile for testing
@@ -16,6 +18,9 @@ kind: Group
 metadata:
   name: platform-team
   description: Platform Team
+  tags:
+    - software-engineering
+    - platform
 spec:
   type: team
   profile:
@@ -31,6 +36,8 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: abel
+  tags:
+    - tech-lead
 spec:
   profile:
     displayName: Abel
@@ -44,6 +51,8 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: ana
+  tags:
+    - developer
 spec:
   profile:
     displayName: Ana
@@ -57,6 +66,8 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: estefanie
+  tags:
+    - developer
 spec:
   profile:
     displayName: Estefanie
@@ -70,6 +81,8 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: zully
+  tags:
+    - business-analyst
 spec:
   profile:
     displayName: Zully
@@ -83,6 +96,8 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: luis
+  tags:
+    - product-owner
 spec:
   profile:
     displayName: Luis
