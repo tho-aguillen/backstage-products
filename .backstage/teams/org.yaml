@@ -25,3 +25,4 @@ metadata:
 spec:
   targets:
     - ./software-engineering.yaml
+    - ./guests.yaml
