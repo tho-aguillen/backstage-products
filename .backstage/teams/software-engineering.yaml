@@ -22,7 +22,7 @@ metadata:
     - software-engineering
     - platform
 spec:
-  type: team
+  type: product-area
   profile:
     # Intentional no displayName for testing
     email: platform-team@airline.com
