@@ -50,6 +50,21 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
+  name: backstage.user
+  tags:
+    - developer
+spec:
+  profile:
+    displayName: Backstage User
+    email: backstage.user@iberia.es
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Luna&backgroundColor=transparent
+  memberOf: [platform-team]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
   name: ana
   tags:
     - developer
